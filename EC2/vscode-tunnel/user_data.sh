@@ -17,27 +17,15 @@ chmod 707 /home/dev/log
 wget -O- https://aka.ms/install-vscode-server/setup.sh | sh
 
 ## create start-code-server.sh
-echo '#!/bin/sh' >> /home/dev/code-server-install/start-code-server.sh
-echo 'nohup code-server --accept-server-license-terms >> /home/dev/log/code-server.log 2>&1 &' >> /home/dev/code-server-install/start-code-server.sh
+wget https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/start-code-server.sh -p /home/dev/code-server-install/
 chmod 745 /home/dev/code-server-install/start-code-server.sh
 
 ## create start-code-server.service
-echo '[Unit] ' >> /home/dev/code-server-install/start-code-server.service 
-echo 'After=network.target ' >> /home/dev/code-server-install/start-code-server.service 
-echo '' >> /home/dev/code-server-install/start-code-server.service 
-echo '[Service] ' >> /home/dev/code-server-install/start-code-server.service 
-echo 'ExecStart=/home/dev/code-server-install/start-code-server.sh ' >> /home/dev/code-server-install/start-code-server.service 
-echo 'Type=forking ' >> /home/dev/code-server-install/start-code-server.service 
-echo 'User=dev ' >> /home/dev/code-server-install/start-code-server.service 
-echo '' >> /home/dev/code-server-install/start-code-server.service 
-echo '[Install] ' >> /home/dev/code-server-install/start-code-server.service 
-echo 'WantedBy=default.target' >> /home/dev/code-server-install/start-code-server.service 
+wget https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/start-code-server.service -p /home/dev/code-server-install/
 chmod 664 /home/dev/code-server-install/start-code-server.service
 
-## create enable-code-server-service.sh
-echo "sudo systemctl daemon-reload"  >> /home/dev/code-server-install/enable-code-server-service.sh
-echo "sudo systemctl enable /home/dev/code-server-install/start-code-server.service"  >> /home/dev/code-server-install/enable-code-server-service.sh
-echo "sudo systemctl start start-code-server"  >> /home/dev/code-server-install/enable-code-server-service.sh
+## get enable-code-server-service.sh from github
+wget https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/enable-code-server-service.sh -p /home/dev/code-server-install/
 chmod 745 /home/dev/code-server-install/enable-code-server-service.sh  
 
 ## change back the ownweship to dev
