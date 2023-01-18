@@ -17,16 +17,16 @@ chmod 707 /home/dev/log
 wget -O- https://aka.ms/install-vscode-server/setup.sh | sh
 
 ## create start-code-server.sh
-wget https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/start-code-server.sh -p /home/dev/code-server-install/
+wget -O /home/dev/code-server-install/start-code-server.sh https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/start-code-server.sh
 chmod 745 /home/dev/code-server-install/start-code-server.sh
 
 ## create start-code-server.service
-wget https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/start-code-server.service -p /home/dev/code-server-install/
+wget -O /home/dev/code-server-install/start-code-server.service https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/start-code-server.service
 chmod 664 /home/dev/code-server-install/start-code-server.service
 
 ## get enable-code-server-service.sh from github
-wget https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/enable-code-server-service.sh -p /home/dev/code-server-install/
-chmod 745 /home/dev/code-server-install/enable-code-server-service.sh  
+wget -O /home/dev/code-server-install/enable-code-server-service.sh https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/enable-code-server-service.sh
+chmod 745 /home/dev/code-server-install/enable-code-server-service.sh
 
 ## change back the ownweship to dev
 chown -R dev /home/dev/code-server-install
