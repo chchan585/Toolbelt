@@ -1,0 +1,10 @@
+[Unit]
+After=network.target 
+
+[Service]
+ExecStart=/home/dev/code-server-install/start-code-server.sh
+Type=forking
+User=dev
+
+[Install]
+WantedBy=default.target
