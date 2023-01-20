@@ -1,4 +1,4 @@
-## Introduction
+# vscode-tunnel-helper
 
 This tool is helpful when I need to setup vscode tunnel in an EC2 instance and make it as a system service, such that it start automatically when you boot the instance.
 
@@ -6,7 +6,7 @@ This tool is developed and tested under Ubuntu OS. I did not test it on other im
 
 ## Warning
 
-This tool will creat an user named "dev":
+This tool will create an user named "dev":
 
 - The home directory is `/home/dev`.
 - It do not have a password.
@@ -31,7 +31,7 @@ Follow steps below to init the vs code server:
 
         sudo -i -u dev code-server --accept-server-license-terms 
 
-    In console. It will prompt a github link ffor you to do the registration work. Follow the instruction to finish the registration work. Then, test if the tunnel works by visiting the web version.
+    In console. It will prompt a github link for you to do the registration work. Follow the instruction to finish the registration work. Then, test if the tunnel works by visiting the web version.
 
 3. Press `Ctrl + C` to terminate the tunnel.
 
