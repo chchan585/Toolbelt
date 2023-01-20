@@ -8,3 +8,8 @@ sudo systemctl enable /home/dev/code-server-install/start-code-server.service
 
 ## start the service
 sudo systemctl start start-code-server
+
+## ban all ssh access to this machine 
+sudo -i
+echo "sshd: ALL" >> /etc/hosts.deny
+exit
