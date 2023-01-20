@@ -23,7 +23,7 @@ Follow steps below to init the vs code server:
 1. SSH to your instance. Paste the following command to EC2 User Data field (or manually execute it if you already have one):
 
         #!/bin/sh
-        wget -O- https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/user_data.sh | sh
+        wget -O- https://raw.githubusercontent.com/chchan585/Toolbelt/main/EC2/vscode-tunnel/user_data.sh | sh
 
     This will download `start-code-server.sh`, `user_data.sh` and `start-code-server.service` to dev's home directory, and install code-server to the machine as well.
 
