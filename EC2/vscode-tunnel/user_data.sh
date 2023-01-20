@@ -33,8 +33,8 @@ chown -R dev /home/dev/code-server-install
 chown -R dev /home/dev/log
 
 ## setup guide:
+## 0. Set this in user data field or manually execute: "wget -O- https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/user_data.sh | sh"
 ## 1. run "sudo -i -u dev code-server --accept-server-license-terms", do the initial work then quit
 ## 2. "sudo -i -u dev /home/dev/code-server-install/enable-code-server-service.sh"
 
 
-wget -O- https://raw.githubusercontent.com/chchan585/Toolbelt/dev/EC2/vscode-tunnel/user_data.sh | sh
